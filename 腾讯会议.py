@@ -15,7 +15,6 @@ def imgAutoCick(tempFile, whatDo, debug=False):
                 pyautogui.middleClick() # 中键单击
                 pyautogui.tripleClick() # 鼠标当前位置3击
                 pyautogui.scroll(10) # 滚轮往上滚10， 注意方向， 负值往下滑
-        更多详情：https://blog.csdn.net/weixin_43430036/article/details/84650938
         debug   :是否开启显示调试窗口
     '''
     pyautogui.screenshot('big.png')
