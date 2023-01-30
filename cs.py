@@ -1,3 +1,4 @@
+# 1+2+3...+100=?
 def sum_numbers(num):
     if num == 1:
         return 1
