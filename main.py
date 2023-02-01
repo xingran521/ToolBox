@@ -9,21 +9,19 @@
 '''
 
 # 导入库
-from libs import *
+from libs.Welcome import *
 
 """主体"""
 class ToolBox(object):
     # 函数数据变量初始化方法
     def __init__(self):
         pass
-    # 欢迎（可在后期尝试单独文件制作）
+    # ...
     def Welcome(self):
-        print("-"*50)
-        print("holle")
-        print("-"*50)
+        pass
     # 主方法
     def main(self):
-        self.Welcome()
+        holle()
 
 if __name__ in "__main__":
     ToolBox().main()
