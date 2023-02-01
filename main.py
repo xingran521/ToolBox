@@ -10,6 +10,7 @@
 
 # 导入库
 from libs.Welcome import *
+from libs.File import *
 
 """主体"""
 class ToolBox(object):
@@ -22,6 +23,7 @@ class ToolBox(object):
     # 主方法
     def main(self):
         holle()
+        js()
 
 if __name__ in "__main__":
     ToolBox().main()

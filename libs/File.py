@@ -9,3 +9,13 @@
 '''
 
 # 导入库
+import json,os
+
+def js():
+    print (os.getcwd())
+    f = open(os.getcwd()+'\libs\config\cs.json', 'r')
+    content = f.read()
+    a = json.loads(content)
+    print(type(a))
+    print(a)
+    f.close()
