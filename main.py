@@ -2,23 +2,23 @@
 # -*- coding: utf-8 -*-
 '''
 @File    : main.py
-@version :1.0
+@version : 0.1
 @Time    : 2023/02/01 09:59:35
 @Author  : cxr
-@Desc    : None
+@Desc    : 工具集
 '''
 
 # 导入库
+from libs import *
 
+class ToolBox(object):
+    """主体"""
+    def __init__(self):
+        pass
+    def cs(self):
+        pass
+    def main(self):
+        pass
 
-class ToolBox:
-    
-    def __init__():
-        pass
-    def cs():
-        pass
-    def main():
-        pass
-
-if "__name__" in __init__:
+if __name__ in "__main__":
     ToolBox()
