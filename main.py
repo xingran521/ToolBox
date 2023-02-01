@@ -23,7 +23,7 @@ class ToolBox(object):
     # 主方法
     def main(self):
         holle()
-        File().js()
+        File().main()
 
 if __name__ in "__main__":
     ToolBox().main()
