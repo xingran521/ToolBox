@@ -11,14 +11,19 @@
 # 导入库
 from libs import *
 
+"""主体"""
 class ToolBox(object):
-    """主体"""
+    # 函数数据变量初始化方法
     def __init__(self):
         pass
-    def cs(self):
-        pass
+    # 欢迎（可在后期尝试单独文件制作）
+    def Welcome(self):
+        print("-"*50)
+        print("holle")
+        print("-"*50)
+    # 主方法
     def main(self):
-        pass
+        self.Welcome()
 
 if __name__ in "__main__":
-    ToolBox()
+    ToolBox().main()
