@@ -10,12 +10,19 @@
 
 # 导入库
 import json,os
+""" 主函数 """
+class File(object):
+    def __init__(self):
+        self.path = os.getcwd()+'\libs\config\cs.json'
+        print (self.path)
 
-def js():
-    print (os.getcwd())
-    f = open(os.getcwd()+'\libs\config\cs.json', 'r')
-    content = f.read()
-    a = json.loads(content)
-    print(type(a))
-    print(a)
-    f.close()
+    # json文件识别
+    def js(self):
+        f = open(self.path, 'r')
+        content = f.read()
+        a = json.loads(content)
+        print(type(a))
+        print(a)
+        f.close()
+
+    
