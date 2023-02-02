@@ -18,12 +18,11 @@ class ToolBox(object):
     def __init__(self):
         pass
     # ...
-    def Welcome(self):
-        pass
+
     # 主方法
     def main(self):
-        holle()
-        File().main()
+        Welcome().main()
+        # File().main()
 
 if __name__ in "__main__":
     ToolBox().main()

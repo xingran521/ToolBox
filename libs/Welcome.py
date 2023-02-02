@@ -9,9 +9,27 @@
 '''
 
 # 导入库
+from libs.File import *
 
-def holle():
-    print("-"*50)
-    print("ToolBox")
-    print("holle {} open TooBox by xingran")
-    print("-"*50)
+class Welcome(object):
+    # 传参方法
+    def __init__(self) -> None:
+        self.info = File(os.getcwd()+'\libs\config\info.json',"json").main()
+    
+    # 数据处理
+    def Data_Handling(self):
+        print(self.info)
+    
+    # 欢迎方法
+    def holle(self):
+        # 调用数据处理
+        self.Data_Handling()
+        # 信息拼接展示
+        print("-"*50)
+        print("ToolBox")
+        print("holle {} open TooBox by xingran")
+        print("-"*50)
+        
+    # 主方法
+    def main(self):
+        self.holle()

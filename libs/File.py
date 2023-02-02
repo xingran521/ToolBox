@@ -11,16 +11,18 @@
 # 导入库
 import json,os
 """ 主函数 """
+"""缺少读取加载
+"""
 class File(object):
 
-    def __init__(self, path = os.getcwd()+'\libs\config\cs.json', typen = "json",data = "", Read_write = "r", Recursive = "False"):
+    def __init__(self, path, typen, data = "", Read_write = "r", Recursive = "False"):
         """数据传入
 
         Args:
-            path (_type_, optional): 文件或文件夹路径. Defaults to os.getcwd()+'\libs\config\cs.json'.
-            typen (str, optional): 文件类型. Defaults to "json".
+            path (_type_, optional): 文件或文件夹路径.
+            typen (str, optional): 文件类型.
             data (str, optional): 保存文件的数据. Defaults to "".
-            Read_write (str, optional): 是读取还是写入. Defaults to "r".
+            Read_write (str, optional): 是读取还是写入(r读取w写入). Defaults to "r".
             Recursive (str, optional): 是否递归文件识别. Defaults to "False".
         """
         # 路径
@@ -45,7 +47,7 @@ class File(object):
         File_data = open(self.path, self.Read_write)
         # 逐个字符读取
         content = File_data.read()
-        print(content)
+        # print(content)
         # 判断读写
         if(self.Read_write == "w"):
             pass            
