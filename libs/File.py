@@ -44,7 +44,7 @@ class File(object):
             _type_: _description_
         """
         # 打开文件并储存
-        File_data = open(self.path, self.Read_write)
+        File_data = open(self.path, self.Read_write ,encoding='utf8')
         # 逐个字符读取
         content = File_data.read()
         # print(content)
