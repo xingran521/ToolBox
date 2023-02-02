@@ -72,7 +72,7 @@ class File(object):
             print("路径没写是<(＿　＿)>")
             return 0 
         # 判断是否自动识别
-        if (self.Read_write == "False"):
+        if (self.Recursive == "False"):
             # 判断类型
             if (self.type == "json"):
                 return self.js()
