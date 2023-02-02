@@ -1,6 +1,7 @@
 {
     "name": "xingran",
     "mail": "xingrna01@qq.com",
+    "version": "1.0",
     "Display": {
         "Figure": {},
         "Sentence": {

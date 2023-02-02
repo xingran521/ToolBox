@@ -10,6 +10,7 @@
 
 # 导入库
 from libs.File import *
+import random
 
 class Welcome(object):
     # 传参方法
@@ -18,7 +19,11 @@ class Welcome(object):
     
     # 数据处理
     def Data_Handling(self):
-        print(self.info)
+        print(self.info["name"])
+        print(self.info["mail"])
+        print(self.info["version"])
+        print(self.info["Display"]["Sentence"][str(random.randint ( 0, len(self.info["Display"]["Sentence"])-1))])
+        nu = random.randint ( 0, len(self.info["Display"]["Sentence"])-1)
     
     # 欢迎方法
     def holle(self):
