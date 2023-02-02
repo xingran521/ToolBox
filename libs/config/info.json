@@ -1,8 +1,57 @@
 {
-    "name": "dabao",
-    "id":123,
-    "hobby": {
-        "sport": "basketball",
-        "book": "python study"
+    "name": "xingran",
+    "mail": "xingrna01@qq.com",
+    "Display": {
+        "Figure": {
+            "0" : ""
+        },
+        "Sentence": {
+            "0" : "/**\n* 这个公司没有年终奖的,兄弟别指望了,也别来了,我准备辞职了\n* 另外这个项目有很多*Bug* 你坚持不了多久的,拜拜!\n*/",
+            "1" : "/**\n* You may think you know what the following code does.\n* But you dont. Trust me.\n* Fiddle with it, and youll spend many a sleepless\n* night cursing the moment you thought youd be clever\n* enough to "optimize" the code below.\n* Now close this file and go play with something else.\n*/\n/**\n* 你可能会认为你读得懂以下的代码。但是你不会懂的，相信我吧。\n* 要是你尝试玩弄这段代码的话，你将会在无尽的通宵中不断地咒骂自己为什么会认为自己聪明到可以优化这段代码。\n* 现在请关闭这个文件去玩点别的吧。\n*/\n",
+            "2" : "/**\n* somedev1 -  6/7/16 Adding temporary tracking of Login screen\n* somedev2 -  1/22/17 Temporary my ass\n*/\n/**\n* 一些修改1 - 2016/6/7 增加临时的跟踪登录界面\n* 一些修改2 - 2017/1/22 我临时的犯傻\n*/\n",
+            "3" : "/**\n* For the brave souls who get this far: You are the chosen ones,\n* the valiant knights of programming who toil away, without rest,\n* fixing our most awful code. To you, true saviors, kings of men,\n* I say this: never gonna give you up, never gonna let you down,\n* never gonna run around and desert you. Never gonna make you cry,\n* never gonna say goodbye. Never gonna tell a lie and hurt you.\n*/\n/**\n* 致终于来到这里的勇敢的人： \n* 你是被上帝选中的人，是英勇的、不敌辛苦的、不眠不休的来修改我们这最棘手的代码的编程骑士。\n* 你，我们的救世主，人中之龙，我要对你说：永远不要放弃，永远不要对自己失望，永远不要逃走，辜负了自己，\n* 永远不要哭啼，永远不要说再见，永远不要说谎来伤害自己。\n*/\n",
+            "4" : "/**\n* Dear maintainer:\n* \n* Once you are done trying to 'optimize' this routine,\n* and have realized what a terrible mistake that was,\n* please increment the following counter as a warning\n* to the next guy:\n* \n* total_hours_wasted_here = 42\n*/\n/**\n* 亲爱的维护者：\n* \n* 如果你尝试了对这段程序进行'优化'\n* 下面这个计数器的个数用来对后来人进行警告\n* \n* 浪费在这里的总时间 = 42h\n*/\n",
+            "5" : "/**    \n* When I wrote this, only God and I understood what I was doing\n* Now, God only knows\n*/\n/**    \n* 写这段代码的时候，只有上帝和我知道它是干嘛的\n* 现在，只有上帝知道\n*/\n",
+            "6" : "// sometimes I believe compiler ignores all my comments\n// 有时候我相信编译器忽略了我所有的注释\n",
+            "7" : "// To understand recursion, see the bottom of this file \nAt the bottom of the file:\n// To understand recursion, see the top of this file\n// 想要明白递归须看文件末尾\n到了文末\n// 想要明白递归须看文件顶部\n",
+            "8" : "// If this comment is removed the program will blow up \n// 如果删了此处注释程序就炸了\n// This function has been here since 1987. DON'T FXXKING TOUCH IT\n// 这函数1987年就这在了，别他娘动它\n// if i ever see this again i'm going to start bringing guns to work\n// 如果要是再让我看见这样的代码，也许我会带着一把枪来上班\n",
+            "9" : "// no comments for you\n// it was hard to write\n// so it should be hard to read\n// 难写的代码，肯定很难读。因此，我没有注释留给你。\n",
+            "10" : "// I will give you two of my seventy-two virgins if you can fix this.\n// 要是你能修正这个问题的话，我会在我的七十二个处女中挑两个送你\n",
+            "11" : "// I am not responsible of this code.\n// They made me write it, against my will.\n// 下面的代码，我不负责。因为是他们逼我写的，违背了我的意愿。\n",
+            "12" : "/* You are not expected to understand this */\n/* 你绝不会明白的 */\n",
+            "13" : "// I have to find a better job\n// 看来我需要找份更好的工作了\n"
+        }
     }
 }
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+
+
