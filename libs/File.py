@@ -12,6 +12,7 @@
 import json,os
 """ 主函数 """
 """缺少读取加载
+    判断文件是否存在
 """
 class File(object):
 

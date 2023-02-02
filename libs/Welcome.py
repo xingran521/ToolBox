@@ -22,8 +22,8 @@ class Welcome(object):
         print(self.info["name"])
         print(self.info["mail"])
         print(self.info["version"])
-        print(self.info["Display"]["Sentence"][str(random.randint ( 0, len(self.info["Display"]["Sentence"])-1))])
-        nu = random.randint ( 0, len(self.info["Display"]["Sentence"])-1)
+        # 取出info->Display->Sentence->随机
+        Content = self.info["Display"]["Sentence"][str(random.randint ( 0, len(self.info["Display"]["Sentence"])-1))]
     
     # 欢迎方法
     def holle(self):
