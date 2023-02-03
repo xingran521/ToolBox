@@ -17,6 +17,7 @@ class ToolBox(object):
     # 函数数据变量初始化方法
     def __init__(self):
         pass
+    
     # 接收命令处理
     def Command_Handling(self):
         # 接收命令
