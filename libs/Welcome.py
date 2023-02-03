@@ -19,11 +19,14 @@ class Welcome(object):
     
     # 数据处理
     def Data_Handling(self):
-        print(self.info["name"])
-        print(self.info["mail"])
-        print(self.info["version"])
+        # 作者名字
+        self.name = self.info["name"]
+        # 邮箱
+        self.mail = self.info["mail"]
+        # 版本
+        self.version = self.info["version"]
         # 取出info->Display->Sentence->随机
-        Content = self.info["Display"]["Sentence"][str(random.randint ( 0, len(self.info["Display"]["Sentence"])-1))]
+        self.Content = self.info["Display"]["Sentence"][str(random.randint ( 0, len(self.info["Display"]["Sentence"])-1))]
     
     # 欢迎方法
     def holle(self):
