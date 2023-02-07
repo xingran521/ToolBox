@@ -16,20 +16,21 @@ from libs.File import *
 class ToolBox(object):
     # 函数数据变量初始化方法
     def __init__(self):
-        pass
-    
+        self.Command_path = "ToolBox>"
+        
+
     # 接收命令处理
     def Command_Handling(self):
         # 接收命令
         while True:
             # 输入命令判断
-            Commands = input("cs>")
+            Commands = input("ToolBox>")
             # list工具列表
             if (Commands == "list"):
                 pass
             # help帮助信息
             if (Commands == "help"):
-                pass
+                print(" ".join(File(os.getcwd()+'\libs\config\help.txt',"txt").main()))
             # open打开工具
             if (Commands == "open"):
                 pass
@@ -43,6 +44,7 @@ class ToolBox(object):
         Welcome().main()
         # 文件读取
         # File().main()
+        self.Command_Handling()
         
 if __name__ in "__main__":
     ToolBox().main()

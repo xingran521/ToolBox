@@ -59,6 +59,16 @@ class File(object):
         # 退出打开数据
         File_data.close()
 
+    # txt文件识别
+    def txt(self):
+        # 打开文件并储存
+        File_data = open(self.path, self.Read_write ,encoding='utf8')
+
+        data = File_data.readlines()  # 直接将文件中按行读到list里，效果与方法2一样
+
+        File_data.close()  # 关
+        return data #返回list
+
     # 自动递归识别
     def Recursive_identification(self):
         pass
@@ -79,6 +89,8 @@ class File(object):
             # 判断类型
             if (self.type == "json"):
                 return self.js()
+            if (self.type == "txt"):
+                return self.txt()
         else:
             print("自动识别")
     

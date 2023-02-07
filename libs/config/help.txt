@@ -1,0 +1,5 @@
+help:
+    help: 帮助信息
+    list: 工具列表
+    open: 打开工具
+    exit: 退出程序
