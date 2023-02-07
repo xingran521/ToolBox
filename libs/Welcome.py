@@ -11,14 +11,18 @@
 # 导入库
 from libs.File import *
 import random
+from getpass import getuser
 
 class Welcome(object):
+
     # 传参方法
     def __init__(self) -> None:
         self.info = File(os.getcwd()+'\libs\config\info.json',"json").main()
     
     # 数据处理
     def Data_Handling(self):
+        # 获取系统用户名字
+        self.sys_name = getuser()
         # 作者名字
         self.name = self.info["name"]
         # 邮箱
@@ -37,7 +41,7 @@ class Welcome(object):
         # logo
         print("'\n'  $$$$$$$$\                     $$\ $$$$$$$\                      \n'  \__$$  __|                    $$ |$$  __$$\                     \n'     $$ |    $$$$$$\   $$$$$$\  $$ |$$ |  $$ | $$$$$$\  $$\   $$\ \n'     $$ |   $$  __$$\ $$  __$$\ $$ |$$$$$$$\ |$$  __$$\ \$$\ $$  |\n'     $$ |   $$ /  $$ |$$ /  $$ |$$ |$$  __$$\ $$ /  $$ | \$$$$  / \n'     $$ |   $$ |  $$ |$$ |  $$ |$$ |$$ |  $$ |$$ |  $$ | $$  $$<  \n'     $$ |   \$$$$$$  |\$$$$$$  |$$ |$$$$$$$  |\$$$$$$  |$$  /\$$\ \n'     \__|    \______/  \______/ \__|\_______/  \______/ \__/  \__|\n'")
         # 关于
-        print("'\t\t\t\t\t\tholle {} open TooBox by xingran")
+        print("'\t\t\t\t\t\tholle {"+self.sys_name+"} open TooBox by xingran")
         print("-"*80)
         
     # 主方法
