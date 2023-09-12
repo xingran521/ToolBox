@@ -21,7 +21,7 @@ class ToolBox(object):
         # 命令路径
         self.Command_path = "ToolBox"+self.Tool_path+">"
         # 文件读取
-        self.ToolBox_list = File(os.getcwd()+'\ToolBox', Recursive = "True").main()
+        self.ToolBox_list = File(os.getcwd()+'\ToolBox', Recursive = "True", No_scan_path = ["config"]).main()
         
 
     # 接收命令处理
@@ -34,7 +34,10 @@ class ToolBox(object):
                 if (Commands in ["list","help","open","exit"]):
                     # list工具列表
                     if (Commands == "list"):
-                        pass
+                        # 循环导出路径列表
+                        for path_list in self.ToolBox_list:
+                            # 数据处理并提取文件名字输出
+                            print (path_list.split("\\")[-1])
                     # help帮助信息
                     if (Commands == "help"):
                         print(" ".join(File(os.getcwd()+'\libs\config\help.txt',"txt").main()))
@@ -55,6 +58,7 @@ class ToolBox(object):
     def main(self):
         # 欢迎
         Welcome().main()
+        # 处理命令
         self.Command_Handling()
         
 if __name__ in "__main__":

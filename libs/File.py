@@ -16,7 +16,7 @@ import json,os
 """
 class File(object):
 
-    def __init__(self, path, typen = "", data = "", Read_write = "r", Recursive = "False"):
+    def __init__(self, path, typen = "", data = "", Read_write = "r", Recursive = "False", No_scan_path = []):
         """数据传入
 
         Args:
@@ -25,6 +25,7 @@ class File(object):
             data (str, optional): 保存文件的数据. Defaults to "".
             Read_write (str, optional): 是读取还是写入(r读取w写入). Defaults to "r".
             Recursive (str, optional): 是否递归文件识别. Defaults to "False".
+            No_scan_path (str, optional): 不扫描路径，递归执行填写参数. Defaults to [].
         """
         # 路径
         self.path = path
@@ -36,13 +37,15 @@ class File(object):
         self.Read_write = Read_write
         # 数据
         self.data = data
+        # 不扫描路径或文件
+        self.no_path = No_scan_path
 
     # json文件识别
     def js(self):
         """
         备注：未写写入
         Returns:
-            _type_: _description_
+            _type_: 返回识别数据
         """
         # 打开文件并储存
         File_data = open(self.path, self.Read_write ,encoding='utf8')
@@ -63,23 +66,38 @@ class File(object):
     def txt(self):
         # 打开文件并储存
         File_data = open(self.path, self.Read_write ,encoding='utf8')
-
-        data = File_data.readlines()  # 直接将文件中按行读到list里，效果与方法2一样
-
-        File_data.close()  # 关
-        return data #返回list
+        # 直接将文件中按行读到list里，效果与方法2一样
+        data = File_data.readlines()  
+        # 关
+        File_data.close()  
+        #返回list
+        return data 
 
     # 自动递归识别
-    def Recursive_identification(self, list_name):
-        """递归获取目录下（文件夹下）所有文件的路径"""
-        for file in os.listdir(self.path):  # 获取文件（夹）名
-            file_path = os.path.join(self.path, file)  # 将文件（夹）名补全为路径
-            if os.path.isdir(file_path):  # 如果是文件夹，则递归
-                self.Recursive_identification(list_name)
+    def Recursive_identification(self, dir_path, list_name = []):
+        """递归识别文件+路径
+
+        Args:
+            dir_path (_type_): 文件夹路径，必传参数.
+            list_name (list, optional): 递归返回参数. Defaults to [].
+
+        Returns:
+            _type_: 返回list_name
+        """
+        # 获取文件（夹）名
+        for file in os.listdir(dir_path):
+            # 将文件（夹）名补全为路径
+            file_path = os.path.join(dir_path, file)
+            # 拒绝递归的文件以及文件路径
+            if (file in self.no_path or file_path in self.no_path):
+                pass
+            # 如果是文件夹，则递归
+            elif(os.path.isdir(file_path) == True and file != ""):
+                self.Recursive_identification(file_path)
             else:
-                list_name.append(file_path)  # 保存路径
-            print(list_name)
-        # return list_name
+                # 保存路径
+                list_name.append(file_path)
+        return list_name
 
 
     # 主方法
@@ -87,7 +105,7 @@ class File(object):
         """
         备注：未写自动识别
         Returns:
-            _type_: _description_
+            _type_: 返回处理数据
         """
         # 判断路径是否有写
         if (self.path == False):
@@ -101,5 +119,5 @@ class File(object):
             if (self.type == "txt"):
                 return self.txt()
         else:
-            self.Recursive_identification()
-    
+            # 启动文件递归
+            return self.Recursive_identification(dir_path = self.path)
